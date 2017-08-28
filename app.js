@@ -11,7 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
-// database hosted in mlab this is keeo ocomenrig
+// database hosted in mlab
 mongoose.connect('mongodb://test:2513433@ds145303.mlab.com:45303/todoli');
 var db = mongoose.connection;
 
