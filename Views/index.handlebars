@@ -1,0 +1,52 @@
+<html>
+
+<meta charset="UTF-8">
+<meta name = "viewport"
+content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<h2 class="page-header">Dashboard</h2>
+
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+<script
+src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+
+</script>
+
+
+<script>
+particlesJS.load('particles-js', '/css/particles.json', function() {
+console.log('particle.json loaded... ');
+});
+
+</script>
+
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css" />
+<script src="todo-list.js"></script>
+<p>Welcome to your dashboard</p>
+
+<body >
+
+<div id="todo-table" >
+
+<form  onsubmit="setTimeout(function () { window.location.reload(); }, 10)" method="post" action="/" >
+
+<input type="text" name="item" placeholder="Add new item ..." required />
+
+<button type="submit"> Add Item </button>
+
+</form>
+
+<ul>
+{{#each todos}}
+    <li class="intro">{{ this.item }}</li>
+{{/each}}
+</ul>
+</div>
+
+
+</body>
+
+</html>
