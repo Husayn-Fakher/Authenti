@@ -12,7 +12,7 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
 // database hosted in mlab
-mongoose.connect('mongodb://test:2513433@ds145303.mlab.com:45303/todoli');
+mongoose.connect('mongodb://@ds145303.mlab.com:45303/todoli');
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
